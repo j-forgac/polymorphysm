@@ -1,5 +1,5 @@
 fun main(){
-    val operations = mapOf("add" to add(), "substract" to substract(), "multiply" to multiply(), "divide" to divide())
+    val operations = mapOf("add" to Add(), "substract" to Substract(), "multiply" to Multiply(), "divide" to Divide())
     val equation = mutableListOf<String>()
     println("number 1")
     equation.add(readLine()!!)
@@ -15,25 +15,25 @@ interface IOperation {
     fun compute(a: Int,b: Int): Int
 }
 
-class add: IOperation{
+class Add: IOperation{
     override fun compute(a: Int, b: Int): Int {
         return a + b
     }
 }
 
-class substract: IOperation{
+class Substract: IOperation{
     override fun compute(a: Int, b: Int): Int {
         return a - b
     }
 }
 
-class multiply: IOperation{
+class Multiply: IOperation{
     override fun compute(a: Int, b: Int): Int {
         return a * b
     }
 }
 
-class divide: IOperation{
+class Divide: IOperation{
     override fun compute(a: Int, b: Int): Int {
         return a / b
     }
